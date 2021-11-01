@@ -59,9 +59,8 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = (props) => {
-  
   const router = useRouter();
- 
+
   const themeOptions = () => [
     {
       value: 'default',
@@ -153,11 +152,10 @@ const Header: React.FC<HeaderProps> = (props) => {
                   style={{ cursor: 'pointer' }}
                   placement="bottom"
                   currentPath={router.pathname}
-                  items={[
-                  ]}
+                  items={[]}
                   Link={Link}
                 >
-                  <User image="url('/icons/icon-72x72.png')" name="Dennis" title="IT Lead" size="Medium" />
+                  <User image="url('/icons/icon-72x72.png')" name="Pak Dennis" title="IT Lead" size="Medium" />
                 </ContextMenu>
               ),
             },
