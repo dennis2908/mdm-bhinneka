@@ -3,10 +3,10 @@ import Row from '@paljs/ui/Row';
 import Col from '@paljs/ui/Col';
 import React from 'react'
 
+import cx from './barang_list.module.css'
+
 import Layout from 'Layouts';
 import ListIcon from '@material-ui/icons/List';
-
-import {makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -24,15 +24,6 @@ const columns = [
   { id: 'name', label: 'Name', align: 'center',minWidth: 170 },
   { id: 'published_at', align: 'right',label: 'Published At', minWidth: 170 },
 ];
-
-const useStyles = makeStyles({
-  root: {
-    width: '100%',
-  },
-  container: {
-    maxHeight: 440,
-  },
-});
 
 export default function Barang_list() {
 	
@@ -75,7 +66,6 @@ export default function Barang_list() {
     setShowHideLin({display:"none"})
   }
   
-  const classes = useStyles();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -94,7 +84,7 @@ export default function Barang_list() {
           <Card status="Primary" accent="Info">
             <CardHeader><ListIcon style={{marginBottom:-7}} color="primary"/> DATA BARANG </CardHeader>
             <CardBody>
-   			<Paper className={classes.root}>
+   			<Paper className={cx.root}>
       <TableContainer >
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
